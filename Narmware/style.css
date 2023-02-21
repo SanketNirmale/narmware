@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins&family=Roboto:wght@400;500;700&display=swap');
+body {
+    margin: 0px;
+}
+.container {
+    margin: 0% 10%;
+}
+.flex {
+    display: flex;
+}
+header {
+    background-color: antiquewhite;
+}
+header .flex {
+    align-items: center;
+}
+.subHeader {
+    margin-right: auto;
+}
+.subHeader img {
+    margin: 10px;
+}
+.buttons ul, li, a{
+    font-family: Poppins, sans-serif;
+    display: inline;
+    text-decoration: none;
+    word-spacing: 10px;
+    color: black;
+    justify-content: space-between;
+}
+/* first section */
+.meetClients {
+    font-family: Roboto, sans-serif;
+}
+.meetClients .clas1{
+    justify-content: space-evenly;
+    width: 100%;
+}
+.clas1 h2 {
+    font-size: 36px;
+    font-weight: 500;
+    margin: 25px 0px;
+}
+.midClas1 p {
+    font-size: 14px;
+    margin: 25px 0px;
+    padding: 14px;
+}
+.clas1 button{
+    height: 40px;
+    width: 250px;
+    border-radius: 40px;
+    margin: 25px 0px;
+    background-color: #1bb22f;
+    border-color: transparent;
+}
+.clas1 button p {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0px;
+    padding: auto 30px;
+}
+/* Blog section */
+.Blog {
+    background-color: #bee6e6;
+}
+#BlogN {
+    font-family: Roboto,sans-serif;
+    justify-content: center;
+    margin: 0px 25px;
+    font-size: 36px;
+}
+.blog {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 50px;
+    /* background-color: #99cccc; */
+}
+.blogItem {
+    width: 22%;
+    margin: 10px;
+    font-family: Roboto,sans-serif;
+}
+.blogImg img{
+    border-radius: 8px;
+    width: 100%;
+    height: 175px;
+    margin-bottom: 0px;
+}
+.blogImg p {
+    height: 20px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 5px 16px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 0px;
+}
+.blogHeader {
+    height: 50px;
+}
+.blogHeader h2 {
+    font-size: 18px;
+}
+.blogDesc {
+    height: 80px;
+}
+.blogDesc p {
+    font-size: 14px;
+}
+.blogBut button{
+    height: 30px;
+    width: 150px;
+    border-radius: 35px;
+    color: black;
+    border-color: transparent;
+    background-color: #1bb22f;
+    margin: 0px;
+}
+.blogBut button h2{
+    font-size: 11px;
+    padding: 0px 30px;
+    margin: 0px;
+}
+/* Case Studies */
+#CS {
+    font-family: Roboto,sans-serif;
+    justify-content: center;
+    margin: 0px 25px;
+    font-size: 36px;
+}
+.cs {
+    font-family: Roboto,sans-serif;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+.csInfo {
+    width: 30%;
+}
+.csHead h2 {
+    font-size: 30px;
+}
+.csClient p {
+    font-size: 18px;
+}
+.csClient p span {
+    font-size: 22px;
+    font-weight: 700;
+}
+.csDesc p {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: justify;
+}
+.csButton button {
+    height: 40px;
+    width: 200px;
+    border-radius: 40px;
+    border-width: 1px;
+}
+.csButton button p {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0px;
+}
+.csImg {
+    width: 60%;
+    background-image: url(./caseStudy1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+/* Form section */
+section.Form {
+    background-color: #0b3e0f;
+}
+section.Form div {
+    justify-content: space-around;
+    align-items: center;
+}
+section .form{
+    font-family: Roboto, sans-serif;
+    background-color: white;
+    color: black;
+    margin: 50px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    width: 50%;
+}
+.formTitle p {
+    font-weight: 700;
+    font-size: 30px;
+    margin: 30px;
+}
+.formGroup {
+    margin: 15px 30px;
+}
+.formGroup .formGroup{
+    margin: 0%;
+
+}
+.formGroup .formLabel {
+    margin-bottom: 10px;
+} 
+.formGroup label {
+    font-size: 16px;
+}
+.formGroup div>input {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100%;
+    height: 20px;
+}
+.flex-row {
+    justify-content: space-between;
+}
+.formGroup button{
+    width: 100%;
+    border-radius: 15px; 
+    background-color: #0b3e0f;
+    border-color: transparent;
+}
+.formGroup button p {
+    color: white;
+    font-size: 16px;
+    margin: 5px 0px;
+}
+.formLabel span {
+    color: red;
+}
+.formInfo h2 {
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    padding: 20px;
+    color: white;
+}
+
+/*footer section  */
+footer {
+    color: white;
+}
+footer div {
+    align-items: flex-start;
+    justify-content:center;
+}
+.upperfooter {
+    background-color: #001d4b;
+}
+.upperfooter .contactUs {
+    width : 30%;
+}
+footer div h2{
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+.upperfooter .about {
+    width: 20%;
+}
+footer .about img {
+    margin-top: 20px;
+    width: 150px;
+}
+footer .about p {
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+footer div h2+ul{
+    padding: 0%;
+}
+footer div h2+ul>li{
+    display: block;
+    color: white;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding-left: 0;
+}
+.lowerfooter {
+    background-color: #0f2a57;
+}
+.lowerFooter {
+    justify-content: center;
+    color: white;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+}
+.d1 {
+    position: relative;
+    width: 100%;
+}
+.slide img {
+    width: 100%;
+    height: 600px;
+}
+.arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    color: rgb(255, 255, 255);
+    background-color: rgb(47, 0, 255);
+    padding: 8px 19px;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.slide {
+    display: none;
+}

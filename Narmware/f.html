@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Corousal</title>
+
+        <style>
+            body {
+                margin: 0;
+            }
+
+            .d1 {
+                position: relative;
+                width: 100%;
+            }
+
+            .slide img {
+                width: 100%;
+                height: 600px;
+            }
+
+            .arrow {
+                cursor: pointer;
+                position: absolute;
+                top: 45%;
+                color: black;
+                background-color: rgba(255, 255, 255, 0.775);
+                padding: 8px 19px;
+                border-radius: 50%;
+                font-size: 30px;
+                font-weight: bold;
+            }
+
+            .next {
+                right: 10px;
+            }
+
+            .prev {
+                left: 10px;
+            }
+
+            .slide {
+                display: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="d1">
+            <div class="slide">
+                <img src="./images/bulletin-board-ge1fb745ac_1920.jpg" id="im" />            
+            </div>
+            <div class="slide">
+                <img src="./images/devops-g2dd05b68a_1920.jpg" id="im" />                
+            </div>
+            <div class="slide">
+                <img src="./images/office-ga529e856e_1920.jpg" id="im" />
+            </div>
+            <div class="slide">
+                <img src="./images/post-it-gca96ba2a3_1920.jpg" id="im" />
+            </div>
+            <div class="slide">
+                <img src="./images/startup-g34e190438_1920.jpg" id="im" />
+            </div>
+            <div class="slide">
+                <img src="./images/stickies-g0027bdca6_1920.jpg" id="im" />
+            </div>
+
+            <span class="arrow prev" onclick="control(-1)">&#10094;</span>
+            <span class="arrow next" onclick="control(1)">&#10095;</span>
+        </div>
+        <script>
+            let count = 0;
+            slideshow(count);
+
+            function slideshow(x) {
+                let slides = document.getElementsByClassName("slide");
+                if (x == slides.length) {
+                    count = 0;
+                    x = 0;
+                }
+                if (x < 0) {
+                    count = slides.length - 1;
+                    x = slides.length - 1;
+                }
+                for (let y of slides) {
+                    y.style.display = "none";
+                }
+                slides[x].style.display = "block";
+            }
+            function control(y) {
+                count = count + y;
+                slideshow(count); 
+            }
+        </script>
+    </body>
+</html>

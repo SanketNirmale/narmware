@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Validation</title>
+
+    <script>
+        // var p1 = '(^[7896]{1,1})+([0-9]{9,9})$';
+
+        // Email Validation Pattern
+        // var p3=/(^[a-z]{1,1})+([a-z0-9]{0,9})+([._]{0,1})([a-z0-9]{1,19})+([@]{1,1})([a-z]{2,19})+([.]{1,1})(com|co.in|in|usa|fr)$/;
+
+        var name = '(^[A-Z]{1,1})+([A-Za-z]{1,9})$';
+        var mobile = ''
+        var pass = '(^[a-zA-Z0-9@#$%&*]{2,9})+([@#$%&*]{1,1})+([a-zA-Z0-9@#$%&*]{3,10})$';
+
+        var p1 = '(^[a-zA-Z0-9@#$%&*]{8,16})$';
+
+
+        function fun() {
+            err.innerHTML = "";
+            f1.uname.style.border = "3px solid green";
+            msg1.innerHTML = "Please Fill User Name";
+            msg1.style.color = "green";
+        }
+        function fun2() {
+            msg1.innerHTML = "";
+        }
+        function fun1() {
+            var uname = f1.uname.value;
+
+            if (!uname.match(name)) {
+
+                f1.uname.value = "";
+                f1.uname.focus();
+                msg1.innerHTML = "Please Fill correct User Name";
+                msg1.style.color = "red";
+                uname.style.border = "3px solid red";
+            }
+            else {
+                err.innerHTML = "<img src='correct.jpg' height='30px'width='30px'>";
+                msg1.innerHTML = "";
+                f1.mno.focus();
+            }
+        }
+        function pass1() {
+            err4.innerHTML = "";
+            f1.pass.style.border = "3px solid green";
+            msg4.innerHTML = "Please Fill Password Name";
+            msg4.style.color = "green";
+        }
+        function pass2() {
+            var p = f1.pass.value;
+
+            if (!p.match(p1)) {
+
+                // f1.pass.value = "";
+                // f1.pass.focus();
+                msg4.innerHTML = "Please Fill correct Password";
+                msg4.style.color = "red";
+                f1.pass.style.border = "3px solid red";
+            }
+            else {
+                err3.innerHTML = "<img src='correct.jpg' height='30px'width='30px'>";
+                msg4.innerHTML = "";
+                f1.pass.style.border = "";
+                f1.cpass.focus();
+            }
+        }
+
+        // confirm password validation
+
+        function cfun() {
+            var p = f1.pass.value;
+            var c = f1.cpass.value;
+
+            if (!c.match(p)) {
+
+                msg5.innerHTML = "<p style='color:red'>Incorrect Password</p>";
+                f1.cpass.focus();
+                f1.cpass.value = "";
+                return false;
+
+
+            }
+            else {
+                err4.innerHTML = "<img src='correct.jpg' height='30px'width='30px'>";
+                msg5.innerHTML = "";
+            }
+        }
+
+
+
+        // onsubmit validation
+        function sub1() {
+            var uname = f1.uname.value;
+            if (uname == "") {
+                //f1.uname.focus();
+                msg1.innerHTML = "Enter User Name";
+                msg1.style.color = "red";
+                f1.uname.style.border = "3px solid red";
+                return false;
+            }
+            else if (!uname.match(name)) {
+                f1.uname.value = "";
+                f1.uname.focus();
+                msg1.innerHTML = "Please Fill correct User Name";
+                msg1.style.color = "red";
+                uname.style.border = "3px solid red";
+                return false;
+            }
+            else {
+                err.innerHTML = "<img src='correct.jpg' height='30px'width='30px'>";
+                f1.pass.focus();
+            }
+
+            var pwd = f1.pass.value;
+            if (pwd == '') {
+                msg4.innerHTML = "Enter Password";
+                return false;
+            }
+            if (!pwd.match(pass)) {
+                msg4.innerHTML = "password must contain atleast one special character with minimum range 6 and mamimum range 20";
+                return false;
+            }
+            else {
+                err3.innerHTML = "<img src='correct.jpg' height='30px'width='30px'>";
+            }
+            var p = f1.pass.value;
+            var c = f1.cpass.value;
+
+            if (c == '') {
+                msg5.innerHTML = "Re-enter Password";
+                return false;
+            }
+
+            if (!c.match(p)) {
+
+                msg5.innerHTML = "<p style='color:red'>Incorrect Password</p>";
+                f1.cpass.focus();
+                f1.cpass.value = "";
+                return false;
+
+
+            }
+            else {
+                err4.innerHTML = "<img src='correct.jpg' height='30px'width='30px'>";
+                msg5.innerHTML = "";
+            }
+
+
+            //var gen = f1.gen.value;
+            if (f1.gen[0].checked == false && f1.gen[1].checked == false) {
+                msg6.innerHTML = "<p style='color:red'>Please Select gender</p>";
+                return false;
+            }
+            else {
+                err5.innerHTML = "<img src='correct.jpg' height='30px'width='30px'>";
+                msg6.innerHTML = "";
+            }
+            
+            var count = 0;
+            for (var i = 0; i < f1.hobbies.length; i++) {
+                if (f1.hobbies[i].checked == true) {
+                    count++;
+                }
+            }
+            if (count == 0) {
+                msg7.innerHTML = "<p style='color:red'>Please select hobbies</p>";
+                return false;
+
+            }
+            else {
+                err6.innerHTML = "<img src='correct.jpg' height='30px'width='30px'>";
+                msg7.innerHTML = "";
+
+            }
+
+            // select validation
+
+            if (f1.city[0].selected == true) {
+                msg8.innerHTML = "<p style='color:red'>Please select city</p>";
+                return false;
+
+            }
+            else {
+                err7.innerHTML = "<img src='correct.jpg' height='30px'width='30px'>";
+                msg8.innerHTML = "";
+            }
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //var p2 ='(^[A-Z]{1,1})+([A-Za-z ]{1,10})$';
+        // var p3 = /(^[a-z]{1,1})+([a-z0-9]{0,9})+([._]{0,1})([a-z0-9]{1,19})+([@]{1,1})([a-z]{2,19})+([.]{1,1})(com|co.in|in|usa|fr)$/;
+
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+    <table align="center" cellpadding="3">
+        <caption>
+            <h1>Validation Form</h1>
+        </caption>
+        <form name="f1" action="success.html" onsubmit="return sub1()">
+            <tr>
+                <td>Enter Name :-</td>
+                <td><input type="text" id="ename" name="uname" onfocus="fun()" onkeyup="fun2()" onblur="fun1()"
+                        autocomplete="off"></td>
+                <td id="err"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td id="msg1"></td>
+            </tr>
+
+            <tr>
+                <td>Enter Mobile No :-</td>
+                <td><input type="text" name="mno"></td>
+                <td id="err1"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td id="msg2"></td>
+            </tr>
+
+            <tr>
+                <td>Enter Email :-</td>
+                <td><input type="text" name="email"></td>
+                <td id="err2"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td id="msg3"></td>
+            </tr>
+            <tr>
+                <td>Enter Password :-</td>
+                <td><input type="password" name="pass" onblur="pass2()" onfocus="pass1()"></td>
+                <td id="err3"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td id="msg4"></td>
+            </tr>
+
+            <tr>
+                <td>Confirm Password :-</td>
+                <td><input type="password" name="cpass" onblur="cfun()"></td>
+                <td id="err4"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td id="msg5"></td>
+            </tr>
+            <tr>
+                <td>Enter Gender :-</td>
+                <td><input type="radio" name="gen" value="Male">Male<input type="radio" name="gen" value="Female">Female
+                </td>
+                <td id="err5"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td id="msg6"></td>
+            </tr>
+            <tr>
+                <td>Enter Hobbies :-</td>
+                <td>
+                    <input type="checkbox" name="hobbies" value="Swimming">Swimming
+                    <input type="checkbox" name="hobbies" value="Playing">Playing
+                    <input type="checkbox" name="hobbies" value="Dancing">Dancing
+                </td>
+                <td id="err6"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td id="msg7"></td>
+            </tr>
+
+
+            <tr>
+                <td>Enter City :-</td>
+                <td>
+                    <select name="city">
+                        <option>Select City</option>
+                        <option>Pune</option>
+                        <option>Mumbai</option>
+                        <option>Delhi</option>
+                        <option>Nashik</option>
+                    </select>
+                </td>
+                <td id="err7"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td id="msg8"></td>
+            </tr>
+
+
+            <tr>
+
+                <td></td>
+                <td><input type="submit" value="submit"></td>
+            </tr>
+
+
+        </form>
+    </table>
+
+</body>
+
+</html>
